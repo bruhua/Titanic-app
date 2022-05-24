@@ -5,11 +5,8 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-from sklearn import ensemble
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn import neighbors
-from sklearn.ensemble import GradientBoostingClassifier
+
 
 
 
@@ -72,7 +69,7 @@ def preprocessing_df(df):
 
 
 
-def app(df, data_path):
+def app(df) : #, data_path):
     st.title("Embarquement immédiat !")
     st.markdown("""
     Bienvenue à bord du Titanic ! 

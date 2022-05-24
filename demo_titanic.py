@@ -140,29 +140,30 @@ def app(df, data_path):
     resultat = clf_lr.predict(valid_scaled2[-1:])
     resultat2 = clf_lr.predict_proba(valid_scaled2[-1:])
 
+    st.write("")
+    st.write("")
+    if (st.button('JE VALIDE ')):
+        st.subheader("""
+            Votre résultat
+            """)
+
+        if resultat2[0,1] <= 0.2 :
+            st.error("Désolé, vous finissez au fond de l'eau !")
+            st.write("Seulement ", round(resultat2[0,1]*100,2),"% de survie estimée par le modèle."
+                    "\n Vous n'auriez pas du monter à bord.")
+
+        elif (resultat2[0,1] > 0.2) & (resultat2[0,1] < 0.4) :
+            st.warning("Vous êtes Jack : malgré tous vos efforts, vos chances de survie sont assez faibles.")
+            st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle.")
+
+        elif resultat2[0,1] > 0.6 :
+            st.success("Vous êtes Rose : vous avez toutes les chances d'être sauvé !")
+            st.write( round(resultat2[0,1]*100,2),"% de survie estimée par le modèle.")
+        else :
+            st.info("Croisez les doigts ! Vous êtes quasiment à 50-50. ")
+            st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle. "
+                    "\n Il y a peut être encore une place dans un canot de sauvetage ?")
 
 
-    st.subheader("""
-        Votre résultat
-        """)
-
-    if resultat2[0,1] <= 0.2 :
-        st.error("Désolé, vous finissez au fond de l'eau !")
-        st.write("Seulement ", round(resultat2[0,1]*100,2),"% de survie estimée par le modèle."
-                "\n Vous n'auriez pas du monter à bord.")
-
-    elif (resultat2[0,1] > 0.2) & (resultat2[0,1] < 0.4) :
-        st.warning("Vous êtes Jack : malgré tous vos efforts, vos chances de survie sont assez faibles.")
-        st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle.")
-
-    elif resultat2[0,1] > 0.6 :
-        st.success("Vous êtes Rose : vous avez toutes les chances d'être sauvé !")
-        st.write( round(resultat2[0,1]*100,2),"% de survie estimée par le modèle.")
-    else :
-        st.info("Croisez les doigts ! Vous êtes quasiment à 50-50. ")
-        st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle. "
-                "\n Il y a peut être encore une place dans un canot de sauvetage ?")
-
-
-    st.subheader('Envie de comprendre comment ça fonctionne ? ')
-    st.write("N'hésitez pas à explorer l'app à l'aide du menu à gauche")
+        st.subheader('Envie de comprendre comment ça fonctionne ? ')
+        st.write("N'hésitez pas à explorer l'app à l'aide du menu à gauche")

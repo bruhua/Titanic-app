@@ -29,10 +29,10 @@ data_path = os.path.join(current_folder, "Dataframe")
 # Fonction pour charger les données
 @st.cache
 def load_data():
-    train = pd.read_csv(r'C:\Users\bruno.huart\PycharmProjects\titanic_classifier\Dataframe\train.csv',
+    train = pd.read_csv(r'https://raw.githubusercontent.com/bruhua/Titanic-app/main/Dataframe/train.csv',
                         sep=',', header=0, index_col=0, error_bad_lines=False)
 
-    valid = pd.read_csv(r'C:\Users\bruno.huart\PycharmProjects\titanic_classifier\Dataframe\test.csv',
+    valid = pd.read_csv(r'https://raw.githubusercontent.com/bruhua/Titanic-app/main/Dataframe/test.csv',
                         sep=',', header=0, index_col=0, error_bad_lines=False)
     train['df'] = 'train'
     valid['df'] = 'valid'

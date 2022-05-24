@@ -66,7 +66,7 @@ def preprocessing_df(df):
 
 
 
-def app(df, data_path):
+def app(df) : #, data_path):
     st.title("Les modèles")
     st.markdown("""
     Pour prédire la survie des passagers, 4 modèles sont testés. """)

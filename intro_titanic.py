@@ -7,7 +7,7 @@ import os
 
 
 # Page d'introduction
-def app(df, data_path):
+def app(df): #, data_path):
     st.title("Titanic - Prédiction de survie des passagers")
 
     st.subheader("Introduction")

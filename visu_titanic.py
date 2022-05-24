@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 # Page de visualisation des données
-def app(df, data_path):
+def app(df) : #, data_path):
     st.title("Visualisation des données")
     st.markdown("""
 

@@ -21,9 +21,9 @@ PAGES = {
 # Gestion des chemins
 
 # Récupération du dossier courant
-current_folder = os.path.dirname(__file__)
+# current_folder = os.path.dirname(__file__)
 # Récupération du dossier der données (dataset, images, ...)
-data_path = os.path.join(current_folder, "Dataframe")
+# data_path = os.path.join(current_folder, "Dataframe")
 
 
 # Fonction pour charger les données
@@ -56,5 +56,5 @@ st.sidebar.title("Menu")
 # Choix de la page
 selection = st.sidebar.radio("", list(PAGES.keys()))
 page = PAGES[selection]
-page.app(df, data_path)
+page.app(df) # , data_path)
 

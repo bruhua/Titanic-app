@@ -51,10 +51,15 @@ df = load_data()
 
 # Variables globales
 
-st.sidebar.title("Menu")
+st.sidebar.title("Titanic - Prédiction de survie des passagers")
 
 # Choix de la page
-selection = st.sidebar.radio("", list(PAGES.keys()))
+selection = st.sidebar.radio("Menu", list(PAGES.keys()))
 page = PAGES[selection]
-page.app(df) # , data_path)
+page.app(df ) #, data_path)
+
+st.sidebar.markdown("""<hr style="height:2px;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+st.sidebar.markdown("Auteur :")
+st.sidebar.markdown("[Bruno Huart](https://www.linkedin.com/in/bruno-huart-051459107/) ")
+st.sidebar.markdown("""<hr style="height:2px;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 

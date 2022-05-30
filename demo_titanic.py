@@ -159,7 +159,7 @@ def app(df) : #, data_path):
         else :
             st.info("Croisez les doigts ! Vous êtes quasiment à 50-50. ")
             st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle. "
-                    "\n Il y a peut être encore une place dans un canot de sauvetage ?")
+                    "\n Il y a peut-être encore une place dans un canot de sauvetage ?")
 
 
         st.subheader('Envie de comprendre comment ça fonctionne ? ')

@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+from joblib import dump, load
 
 import modeles_titanic
 import intro_titanic
@@ -44,7 +45,8 @@ def load_data():
 df = load_data()
 
 
-
+# Chargement des modeles pour la partie demo
+logistic_reg = load('logistic_reg.joblib')
 
 
 
@@ -54,7 +56,7 @@ df = load_data()
 st.sidebar.title("Titanic - Prédiction de survie des passagers")
 
 # Choix de la page
-selection = st.sidebar.radio("Menu", list(PAGES.keys()))
+selection = st.sidebar.radio("Menu", list(PAGES.keys()),key=range(0,4) )
 page = PAGES[selection]
 page.app(df ) #, data_path)
 

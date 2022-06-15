@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 
-def app(df, data_path):
+def app(df):
     st.title("Les modèles")
     st.markdown("""
     Pour prédire la survie des passagers, 4 modèles sont testés. """)

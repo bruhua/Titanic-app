@@ -46,7 +46,7 @@ df = load_data()
 
 
 # Chargement des modeles pour la partie demo
-logistic_reg = load('logistic_reg.joblib')
+#logistic_reg = load('logistic_reg.joblib')
 
 
 
@@ -58,7 +58,7 @@ st.sidebar.title("Titanic - Prédiction de survie des passagers")
 # Choix de la page
 selection = st.sidebar.radio("Menu", list(PAGES.keys()),key=range(0,4) )
 page = PAGES[selection]
-page.app(df ) #, data_path)
+page.app(df ) 
 
 st.sidebar.markdown("""<hr style="height:2px;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 st.sidebar.markdown("Auteur :")

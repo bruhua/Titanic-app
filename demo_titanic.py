@@ -9,7 +9,10 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 # Import des modeles
-from app_titanic import logistic_reg
+#from app_titanic import logistic_reg
+
+logistic_reg = load('logistic_reg.joblib')
+
 
 # Fonction pour pré-processer les données d'entraînement
 @st.cache

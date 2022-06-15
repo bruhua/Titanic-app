@@ -5,10 +5,11 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.linear_model import LogisticRegression
 
 
 
+# Import des modeles
+from app_titanic import logistic_reg
 
 # Fonction pour pré-processer les données d'entraînement
 @st.cache
@@ -64,12 +65,7 @@ def preprocessing_df(df):
 
 
 
-
-
-
-
-
-def app(df) : #, data_path):
+def app(df):
     st.title("Embarquement immédiat !")
     st.markdown("""
     Bienvenue à bord du Titanic ! 
@@ -122,20 +118,13 @@ def app(df) : #, data_path):
     df_clean3 = nettoyage(df_clean2)
     preprocessing_df(df_clean3)
 
-    X_train_scaled2 = preprocessing_df(df_clean3)[2]
-    X_test_scaled2 = preprocessing_df(df_clean3)[3]
-    y_train2 = preprocessing_df(df_clean3)[4]
-    y_test2 = preprocessing_df(df_clean3)[5]
     valid_scaled2 = preprocessing_df(df_clean3)[6]
 
-    # REG LOG
-    clf_lr = LogisticRegression()
-    clf_lr.fit(X_train_scaled2, y_train2)
-    y_pred_test_lr = clf_lr.predict(X_test_scaled2)
+
 
     # Prediction
-    resultat = clf_lr.predict(valid_scaled2[-1:])
-    resultat2 = clf_lr.predict_proba(valid_scaled2[-1:])
+
+    resultat2 = logistic_reg.predict_proba(valid_scaled2[-1:])
 
     st.write("")
     st.write("")
@@ -159,7 +148,7 @@ def app(df) : #, data_path):
         else :
             st.info("Croisez les doigts ! Vous êtes quasiment à 50-50. ")
             st.write(round(resultat2[0,1]*100,2),"% de survie estimée par le modèle. "
-                    "\n Il y a peut-être encore une place dans un canot de sauvetage ?")
+                    "\n Il y a peut être encore une place dans un canot de sauvetage ?")
 
 
         st.subheader('Envie de comprendre comment ça fonctionne ? ')

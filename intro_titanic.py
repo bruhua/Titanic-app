@@ -14,7 +14,7 @@ def app(df): #, data_path):
     st.markdown("""
     Voici un projet de machine learning classique pour toute personne débutant dans la datascience.
     L'objectif est de prédire la survie des passagers du Titanic en fonction des informations dont on dispose 
-    sur eux. 
+    sur eux (lien vers le dataframe disponible sur [Kaggle](https://www.kaggle.com/c/titanic)). 
     
     """)
 

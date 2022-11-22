@@ -14,8 +14,8 @@ def app(df) : #, data_path):
     """)
 
     st.markdown("""
-    La visualisation des données permet de se faire une idée précise des répartitions, des valeurs prises et également des liens
-    entre nos variables et la variable cible : la survie
+    La visualisation des données permet de connaitre la répartition des données, les valeurs prises ainsi que les valeurs extrêmes s’il y en a. 
+    C’est également l’occasion de créer des visualisations permettant d’établir des liens entre nos variables et la variable cible : la survie.
 
     """)
 

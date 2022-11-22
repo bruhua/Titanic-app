@@ -21,7 +21,7 @@ def app(df):
 
     st.subheader('Résultat avec une régression logistique')
     st.write("Déf : Ce modèle se rapproche d'une régression linéaire classique (y = a + bx...) si ce n'est qu'il permet de prédire la probabilité "
-             "qu'un évenèment arrive (1) ou non (0)")
+             "qu'un évènement arrive (1) ou non (0)")
 
     st.write("==> Le score avec ce modèle est de : 0.821")
     st.write("Cela veut dire que le modèle a réalisé 82.1% de bonnes prédictions ")
@@ -38,7 +38,7 @@ def app(df):
     # RF
     st.subheader('Résultat avec un random forest')
     st.write("Déf : Ce modèle est basé sur le même principe qu'un arbre de décision sauf qu'au lieu d'avoir un seul arbre (qui a davantage de chance de se tromper), on créé une forêt remplies d'arbres (par défaut 100)."
-            "Les prédictions sont donc beaucoup plus robustes et fiables")
+            " Les prédictions sont donc beaucoup plus robustes et fiables.")
 
 
     st.write("==> Le score avec ce modèle est de 0.838")
@@ -64,8 +64,8 @@ def app(df):
 
     # GBC
     st.subheader('Résultat avec un Gradient Boosting Classifier')
-    st.write("Déf : Le GBC repose également sur des arbres sauf qu'il va augmenter le poids observations des difficiles à classer."
-            "\n Le but est d'améliorer au fur et à mesure les arbres")
+    st.write("Déf : Le GBC repose également sur des arbres sauf qu'il va augmenter le poids observations des individus difficiles à classer."
+            "\n Le but est d'améliorer au fur et à mesure les arbres.")
 
     st.write("==> Le score avec ce modèle est de 0.815")
     st.write("Le GBC a réalisé 81.5% de bonnes prédictions")
@@ -75,7 +75,7 @@ def app(df):
     st.write("")
 
     st.subheader('Comparaison des performances des modèles')
-    st.write("Le graphique ci-dessous compare les performances obtenues par nos 4 modèles : les résultats sont assez proches ")
+    st.write("Le graphique ci-dessous compare les performances obtenues par nos 4 modèles : les résultats sont tous assez proches :")
 
 
 

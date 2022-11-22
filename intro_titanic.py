@@ -13,8 +13,7 @@ def app(df): #, data_path):
     st.subheader("Introduction")
     st.markdown("""
     Voici un projet de machine learning classique pour toute personne débutant dans la datascience.
-    L'objectif est de prédire la survie des passagers du Titanic en fonction des informations dont on dispose 
-    sur eux (lien vers le dataframe disponible sur [Kaggle](https://www.kaggle.com/c/titanic)). 
+    L'objectif est de prédire la survie des passagers du Titanic en fonction des données disponibles (lien vers le dataframe disponible sur [Kaggle](https://www.kaggle.com/c/titanic)). 
     
     """)
 
@@ -23,8 +22,7 @@ def app(df): #, data_path):
     En machine learning, nos modèles vont s'entrainer sur une partie des données seulement. 
     \n Ensuite, nous fournissons au modèle des données qu'il n'a jamais vu : le modèle doit donc réussir à obtenir de 
     bonnes prédictions sur ces nouvelles données.
-    \n Dans le cas du Titanic, une bonne prédiction correspond à prédire la survie si le passager a effectivement survécu (et 
-    le décès si le passager n'a pas survécu)
+    \n Dans le cas du Titanic, une bonne prédiction correspond à prédire la survie ou non.
 
     """)
 

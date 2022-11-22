@@ -64,7 +64,7 @@ def app(df):
 
     # GBC
     st.subheader('Résultat avec un Gradient Boosting Classifier')
-    st.write("Déf : Le GBC repose également sur des arbres sauf qu'il va augmenter le poids observations des individus difficiles à classer."
+    st.write("Déf : Le GBC repose également sur des arbres sauf qu'il va augmenter le poids des individus difficiles à classer."
             "\n Le but est d'améliorer au fur et à mesure les arbres.")
 
     st.write("==> Le score avec ce modèle est de 0.815")
